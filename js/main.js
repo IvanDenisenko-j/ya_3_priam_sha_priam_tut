@@ -1,11 +1,6 @@
 Vue.component('board', {
     data() {
         return {
-            columns: [
-                { title: 'Запланированные задачи', cards: [] },
-                { title: 'Задачи в работе', cards: [] },
-                { title: 'Тестирование', cards: [] },
-                { title: 'Выполненные задачи', cards: [] }
             ]
         };
     },
