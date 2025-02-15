@@ -3,7 +3,7 @@ Vue.component('board', {
         return {
             columns: [
                 { title: 'Запланированные задачи', cards: [] },
-                { title: 'Задачи в работе', cards: [] },
+                { title: 'В работе', cards: [] },
                 { title: 'Тестирование', cards: [] },
                 { title: 'Выполненные задачи', cards: [] }
             ]
@@ -100,7 +100,7 @@ Vue.component('board', {
                     <button v-if="index < 3" @click="moveCard(index, index + 1, cardIndex)">Переместить в следующую колонку</button>
                     <button v-if="index === 2" @click="moveCard(index, index - 1, cardIndex)">Вернуть в предыдущую колонку</button>
                     <button v-if="index === 0" @click="removeCard(index, cardIndex)">Удалить</button>
-                    <button v-if="index === 3" @click="removeCard(index, cardIndex)">Удалить</button>
+                    
                     <p v-if="card.returnReason"><strong>Причина возврата:</strong> {{ card.returnReason }}</p>
                 </div>
             </div>
