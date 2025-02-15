@@ -1,4 +1,4 @@
-VVue.component('date-picker', {
+Vue.component('date-picker', {
     props: ['value'],
     template: `
         <input type="date" :value="value" @input="$emit('input', $event.target.value)" />
